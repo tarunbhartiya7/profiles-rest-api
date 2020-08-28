@@ -35,3 +35,29 @@ you can check by running ls command.
 If you create any file in this folder via command line in the server(vagrant machine) it automatically gets created in  your
 project directory(host).
 
+# create a python virtual environment
+python -m venv ~/env
+
+activate python virtual env -> source ~/env/bin/activate
+
+The reason we  do it in home directory of vagrant server so that we do not create 
+the packages in our host machine
+
+deactivate python venv -> deactivate
+
+Refer python cheatsheet-> https://python-guide.readthedocs.io/en/latest/dev/virtualenvs/
+
+install the python dependecies in venv
+pip install -r requirements.txt
+
+# create a django scafold project
+django-admin.py startproject profiles_project .
+
+# create a module for profiles api
+python manage.py startapp profiles_api
+
+# add installed apps to settings.py
+
+# run django dev server
+python manage.py runserver 0.0.0.0:8000
+open browser and run localhost:8000
