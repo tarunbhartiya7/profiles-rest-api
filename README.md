@@ -61,3 +61,20 @@ python manage.py startapp profiles_api
 # run django dev server
 python manage.py runserver 0.0.0.0:8000
 open browser and run localhost:8000
+
+# update models
+
+# PEP 8 guidelines for writing python code
+https://www.python.org/dev/peps/pep-0008/
+
+# create a migration file which is used by Django to manage our database 
+python manage.py makemigrations profiles_api
+
+# run migrations
+python manage.py migrate
+
+# create a superuser
+python manage.py createsuperuser
+
+# register your models
+
